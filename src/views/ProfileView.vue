@@ -117,7 +117,7 @@ const resetProfile = () => {
   overflow-x: hidden;
 }
 
-/* Left section: Profile */
+/* Left section: Profile information */
 .profile-section {
   width: 30%;
   display: flex;
@@ -132,7 +132,7 @@ const resetProfile = () => {
   text-align: center;
 }
 
-/* Profile icon */
+/* Profile image */
 .profile-icon img {
   width: 250px;
   height: 250px;
@@ -148,7 +148,7 @@ const resetProfile = () => {
   margin-top: 20px;
 }
 
-/* Right section: Form or Registration Message */
+/* Right section: Form and Registration Success Message */
 .form-section {
   width: 70%;
   background-color: #e6f0ff;
@@ -215,37 +215,42 @@ const resetProfile = () => {
   border-radius: 5px;
 }
 
-/* Disabled confirm button */
+/* Disabled state for the confirm button */
 .btn-confirm:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
+/* Mobile responsiveness (< 576px) */
+@media (max-width: 576px) {
   .user-container {
     flex-direction: column;
   }
 
-  .profile-section,
+  .profile-section {
+    width: 100%;
+    padding: 20px;
+  }
+
   .form-section {
     width: 100%;
-    height: auto;
+    padding: 20px;
   }
 
   .profile-icon img {
     width: 150px;
     height: 150px;
   }
+}
 
-  .form-section {
-    padding: 20px;
+/* Tablet responsiveness (576px ~ 992px) */
+@media (min-width: 576px) and (max-width: 992px) {
+  .profile-section {
+    width: 40%;
   }
 
-  .input-group,
-  .btn-confirm,
-  .btn-reset {
-    max-width: 100%;
+  .form-section {
+    width: 60%;
   }
 }
 </style>
